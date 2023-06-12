@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "3L30Q8nFfhpATAYWRdOMnSYXrvMzl6nKkejJCInGRQM=",
+  "Source": "HeroWebApi",
+  "BasePath": "_content/HeroWebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
