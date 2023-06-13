@@ -24,7 +24,6 @@ namespace HeroWebApi.Migrations
                     table.PrimaryKey("PK_hero", x => x.Id);
                 });
         }
-
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {

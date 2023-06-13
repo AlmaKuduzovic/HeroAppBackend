@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jasmi\\source\\repos\\HeroAppBackend\\HeroWebApi\\HeroWebApi\\HeroWebApi.csproj": {}
+    "C:\\Users\\jasmi\\source\\repos\\HeroNew\\HeroAppBackend\\HeroWebApi\\HeroWebApi\\HeroWebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jasmi\\source\\repos\\HeroAppBackend\\HeroWebApi\\HeroWebApi\\HeroWebApi.csproj": {
+    "C:\\Users\\jasmi\\source\\repos\\HeroNew\\HeroAppBackend\\HeroWebApi\\HeroWebApi\\HeroWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jasmi\\source\\repos\\HeroAppBackend\\HeroWebApi\\HeroWebApi\\HeroWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\jasmi\\source\\repos\\HeroNew\\HeroAppBackend\\HeroWebApi\\HeroWebApi\\HeroWebApi.csproj",
         "projectName": "HeroWebApi",
-        "projectPath": "C:\\Users\\jasmi\\source\\repos\\HeroAppBackend\\HeroWebApi\\HeroWebApi\\HeroWebApi.csproj",
+        "projectPath": "C:\\Users\\jasmi\\source\\repos\\HeroNew\\HeroAppBackend\\HeroWebApi\\HeroWebApi\\HeroWebApi.csproj",
         "packagesPath": "C:\\Users\\jasmi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jasmi\\source\\repos\\HeroAppBackend\\HeroWebApi\\HeroWebApi\\obj\\",
+        "outputPath": "C:\\Users\\jasmi\\source\\repos\\HeroNew\\HeroAppBackend\\HeroWebApi\\HeroWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jasmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,6 +46,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.5, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",

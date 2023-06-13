@@ -1,4 +1,5 @@
 ﻿using HeroWebApi.EFCore;
+using System.Xml.Linq;
 
 namespace HeroWebApi.Model
 {
@@ -14,11 +15,34 @@ namespace HeroWebApi.Model
         public List<Hero> GetHeroes() {
           
             List<Hero> dataList = _context.Heroes.ToList();
-            //dataList.ForEach(row => response.Add(new Hero() { 
-            // Id = row.Id,
-            //Name = row.Name
-            // }));
             return dataList;
          }
+
+        public void AddHero(Hero hero)
+        {
+            int newId = _context.Heroes.Max(h => h.Id);
+
+            hero.Id = newId + 1;
+
+            _context.Heroes.Add(hero);
+            _context.SaveChanges();
+        }
+
+        public void ModifyHero(int Id, string Name)
+        {
+           Hero hero = _context.Heroes.Where(x=>x.Id==Id).FirstOrDefault();
+
+            hero.Name = Name;
+
+            _context.SaveChanges();
+        }
+
+        public void DeleteHero(int Id)
+        {
+           Hero hero = _context.Heroes.Where(x => x.Id == Id).FirstOrDefault();
+            _context.Heroes.Remove(hero);
+            _context.SaveChanges();
+
+        }
     }
 }

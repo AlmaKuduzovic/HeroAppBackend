@@ -6,9 +6,6 @@ namespace HeroWebApi.EFCore
     {
 
         public EF_DataContext(DbContextOptions<EF_DataContext> options) : base(options) { }
-        
-        
-
         public DbSet<Hero> Heroes { get; set; }
 
     }
