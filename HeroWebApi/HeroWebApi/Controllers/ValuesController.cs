@@ -23,42 +23,46 @@ namespace HeroWebApi.Controllers
         }
 
         // POST api/<ValuesController>
+
         [HttpPost("{int}")]
         public int Post([FromBody] Hero hero)
         {
-            if (hero == null) {
-                throw new ArgumentException(nameof(hero));
-            }
-            _db.AddHero(hero);
-
-            return 0;
-        }
-
-        [HttpPost("{action}")]
-        public IActionResult Post3([FromBody] Hero hero)
-        {
-            if (hero == null)
-            {
-                return BadRequest("null");
-            }
-
             try
             {
+                if (hero == null)
+                {
+                    throw new ArgumentException(nameof(hero));
+                }
+
                 _db.AddHero(hero);
 
-            }catch (Exception b)
+                return 0;
+            }
+            catch (Exception ex)
             {
-                return BadRequest("Error");
+                // For example, you can log the exception:
+                Console.WriteLine($"An error occurred: {ex.Message}");
+
+                // return StatusCode(500, "An error occurred");
             }
 
-            return Ok(hero);
+            return -1; 
         }
 
         // PUT api/<ValuesController>/5
         [HttpPut("{int}")]
         public void PutHero(int id, string name)
         {
-            _db.ModifyHero(id, name);
+            try
+            {
+                _db.ModifyHero(id, name);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+
+                // return StatusCode(500, "An error occurred");
+            }
         }
 
         // DELETE api/<ValuesController>/5
