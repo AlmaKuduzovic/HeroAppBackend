@@ -40,12 +40,10 @@ namespace HeroWebApi.Controllers
             }
             catch (Exception ex)
             {
-                // For example, you can log the exception:
                 Console.WriteLine($"An error occurred: {ex.Message}");
 
                 // return StatusCode(500, "An error occurred");
             }
-
             return -1; 
         }
 
@@ -69,20 +67,31 @@ namespace HeroWebApi.Controllers
         [HttpDelete("{int}")]
         public void Delete(int id)
         {
-
-            _db.DeleteHero(id);
+            try
+            {
+                _db.DeleteHero(id);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
         }
 
         // GET: api/<ValuesController>
         [HttpGet]
         public IEnumerable<Hero> Get()
         {
-            
-
-            IEnumerable<Hero> data = _db.GetHeroes();
-
-            return data;
-
+            try
+            {
+                IEnumerable<Hero> data = _db.GetHeroes();
+                return data;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                // return StatusCode(500, "An error occurred");
+            }
+            return Enumerable.Empty<Hero>();
         }
     }
 }
