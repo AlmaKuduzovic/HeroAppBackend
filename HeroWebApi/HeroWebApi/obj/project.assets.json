@@ -1119,19 +1119,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jasmi\\.nuget\\packages\\": {}
+    "C:\\Users\\Asus\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jasmi\\source\\repos\\HeroNew\\HeroAppBackend\\HeroWebApi\\HeroWebApi\\HeroWebApi.csproj",
+      "projectUniqueName": "C:\\Users\\Asus\\Source\\Repos\\HeroAppBackend\\HeroWebApi\\HeroWebApi\\HeroWebApi.csproj",
       "projectName": "HeroWebApi",
-      "projectPath": "C:\\Users\\jasmi\\source\\repos\\HeroNew\\HeroAppBackend\\HeroWebApi\\HeroWebApi\\HeroWebApi.csproj",
-      "packagesPath": "C:\\Users\\jasmi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jasmi\\source\\repos\\HeroNew\\HeroAppBackend\\HeroWebApi\\HeroWebApi\\obj\\",
+      "projectPath": "C:\\Users\\Asus\\Source\\Repos\\HeroAppBackend\\HeroWebApi\\HeroWebApi\\HeroWebApi.csproj",
+      "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Asus\\Source\\Repos\\HeroAppBackend\\HeroWebApi\\HeroWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jasmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
