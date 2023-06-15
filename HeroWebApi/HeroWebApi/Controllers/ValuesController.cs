@@ -3,6 +3,7 @@ using HeroWebApi.Model;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Security.Principal;
+using System.Xml.Linq;
 
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -25,26 +26,19 @@ namespace HeroWebApi.Controllers
         // POST api/<ValuesController>
 
         [HttpPost("{int}")]
-        public int Post([FromBody] Hero hero)
+        public IActionResult Post([FromBody] Hero hero)
         {
             try
             {
-                if (hero == null)
-                {
-                    throw new ArgumentException(nameof(hero));
-                }
-
                 _db.AddHero(hero);
 
-                return 0;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"An error occurred: {ex.Message}");
 
-                // return StatusCode(500, "An error occurred");
+                Console.WriteLine($"An error occurred: {ex.Message}");
             }
-            return -1; 
+            return Ok(hero);
         }
 
         // PUT api/<ValuesController>/5
@@ -74,7 +68,10 @@ namespace HeroWebApi.Controllers
             catch (Exception ex)
             {
                 Console.WriteLine($"An error occurred: {ex.Message}");
+
+                // return StatusCode(500, "An error occurred");
             }
+
         }
 
         // GET: api/<ValuesController>
