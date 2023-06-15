@@ -26,11 +26,17 @@ namespace HeroWebApi.Controllers
         // POST api/<ValuesController>
 
         [HttpPost("{int}")]
-        public IActionResult Post([FromBody] Hero hero)
+        public int Post([FromBody] Hero hero)
         {
             try
             {
+                if (hero == null) {
+                    throw new ArgumentException(nameof(hero));
+                        
+                }
                 _db.AddHero(hero);
+
+                return 0;
 
             }
             catch (Exception ex)
@@ -38,7 +44,7 @@ namespace HeroWebApi.Controllers
 
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
-            return Ok(hero);
+            return -1;
         }
 
         // PUT api/<ValuesController>/5
@@ -89,6 +95,14 @@ namespace HeroWebApi.Controllers
                 // return StatusCode(500, "An error occurred");
             }
             return Enumerable.Empty<Hero>();
+        }
+        [HttpGet("{string}")]
+        public IEnumerable<Hero> Search(string Name)
+        {
+            
+                IEnumerable<Hero> data = _db.SearchHero(Name);
+                return data;
+           
         }
     }
 }

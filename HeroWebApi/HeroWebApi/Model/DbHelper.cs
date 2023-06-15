@@ -47,12 +47,14 @@ namespace HeroWebApi.Model
 
         }
 
-        public List<Hero> GetHeroes(string Name)
+        public List<Hero> SearchHero(string Name)
         {
-            List<Hero> dataList = _context.Heroes.Where(h => h.Name == Name).ToList();
+            string lowercaseName = Name.ToLower();
+
+            List<Hero> dataList = _context.Heroes.Where(h => h.Name.ToLower().Contains(lowercaseName)).ToList();
+
             return dataList;
         }
-
 
     }
 }
